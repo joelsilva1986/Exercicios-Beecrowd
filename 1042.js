@@ -12,40 +12,49 @@ let lines = conteudoArquivo.split(quebraLinhaWindows);
 //para ler linhas com um unico valor na mesma linha use o comando a seguir
 //let A = Math.floor(lines.shift()); 
 
-let [num1, num2, num3] = lines.shift().split(" ");
+function main () {
+    let [A, B, C] = lines.shift().split(" ");
 
-num1 = parseInt(num1);
-num2 = parseInt(num2);
-num3 = parseInt(num3);
+    A = parseInt(A);
+    B = parseInt(B);
+    C = parseInt(C);
+    
+    let X = A;
+    let Y = B;
+    let Z = C;
 
-let aux1;
-let aux2 ;
-let aux3 ;
-
-console.log("antes do if")
-//aux1
-if(num1 > num2){
-    aux1 = num2;
-} 
-if(num1 < num2){
-    aux1 = num1;
-}
-if(num1 > num3){
-    aux1 = num3;
-}
-if(num1 < num3){
-    aux1 = num1
+    ordenaValor(X, Y, Z);
+    console.log(A);
+    console.log(B);
+    console.log(C);
+    
 }
 
-//aux2
+function ordenaValor(x, y, z) {
 
-if(num2 > num1){
-    aux2 = num1;
+    let aux;
+
+    if(x > y){
+        aux = x;
+        x = y;
+        y = aux;
+    } 
+    if(x > z){
+        aux = x;
+        x = z;
+        z = aux;
+    }
+    if(y > z){
+        aux = y;
+        y = z;
+        z = aux;
+    }
+
+    console.log(x);
+    console.log(y);
+    console.log(z);
+    console.log();
+    
 }
-if(num2 < num1){
-    aux2 = num2;
-}
 
-//aux3
-console.log(aux1, aux2, aux3)
-
+main ();
