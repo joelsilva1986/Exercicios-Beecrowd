@@ -29,5 +29,42 @@ function main() {
 
     let resultados = contaPositivos(valor1, valor2, valor3, valor4, valor5, valor6);
     console.log(`${resultados} valores positivos`);
+}
 
-    let mostraMedia = media(valor1, valor2, valor
+function contaPositivos(valor1, valor2, valor3, valor4, valor5, valor6) {
+
+    let contPositivos = 0;
+    let i = 1;
+
+        do {
+            i += 1;
+            if(valor1 > 0) {
+                contPositivos ++
+            }
+            i += 1;
+            if(valor2 > 0) {
+                contPositivos ++
+            }
+            i += 1
+            if(valor3 > 0) {
+                contPositivos ++
+            }
+            i += 1
+            if(valor4 > 0) {
+                contPositivos ++
+            }
+            i += 1
+            if(valor5 > 0) {
+                contPositivos ++
+            }
+            i += 1
+            if(valor6 > 0) {
+                contPositivos ++
+            }
+        } while (i <= 6 )
+
+    return contPositivos;
+}
+
+main();
+
